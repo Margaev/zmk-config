@@ -59,11 +59,11 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp GRAVE                    &kp N1  &kp N2  &kp N3          &kp N4           &kp N5                                    &kp N6        &kp N7         &kp N8           &kp N9   &kp N0    &kp EQUAL
-&kp ESCAPE                   &kp Q   &kp W   &kp E           &kp R            &kp T                                     &kp Y         &kp U          &kp I            &kp O    &kp P     &kp MINUS
-&mt LCTRL TAB                &kp A   &kp S   &kp D           &kp F            &kp G                                     &kp H         &kp J          &kp K            &kp L    &kp SEMI  &mt RCTRL SQT
-&mt LEFT_SHIFT LEFT_BRACKET  &kp Z   &kp X   &kp C           &kp V            &kp B                   &trans    &trans  &kp N         &kp M          &kp COMMA        &kp DOT  &kp FSLH  &mt RSHIFT RIGHT_BRACKET
-                                             &lt 3 CAPSLOCK  &mt LALT DELETE  &mt LEFT_COMMAND SPACE  &trans    &trans  &mt LCMD RET  &kp BACKSPACE  &lt 3 BACKSLASH
+&kp GRAVE                    &kp N1  &kp N2  &kp N3                 &kp N4                   &kp N5                       &kp N6     &kp N7         &kp N8                   &kp N9   &kp N0    &kp MINUS
+&lt 3 ESCAPE                 &kp Q   &kp W   &kp E                  &kp R                    &kp T                        &kp Y      &kp U          &kp I                    &kp O    &kp P     &lt 4 EQUAL
+&mt LCTRL TAB                &kp A   &kp S   &kp D                  &kp F                    &kp G                        &kp H      &kp J          &kp K                    &kp L    &kp SEMI  &mt RCTRL SQT
+&mt LEFT_SHIFT LEFT_BRACKET  &kp Z   &kp X   &kp C                  &kp V                    &kp B      &trans    &trans  &kp N      &kp M          &kp COMMA                &kp DOT  &kp FSLH  &mt RSHIFT RIGHT_BRACKET
+                                             &mt LEFT_ALT CAPSLOCK  &mt LEFT_COMMAND DELETE  &kp SPACE  &trans    &trans  &kp ENTER  &kp BACKSPACE  &mt RIGHT_ALT BACKSLASH
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -78,11 +78,30 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&kp CLCK                     &kp F1        &kp F2        &kp F3        &kp F4                &kp F5                                    &kp F6                   &kp F7                  &kp F8             &kp F9           &kp F10     &kp F11
-&kp ESCAPE                   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3          &bt BT_SEL 4                              &kp INT_YEN              &trans                  &trans             &trans           &trans      &kp F12
-&mt LCTRL TAB                &bt BT_CLR    &trans        &trans        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                     &kp LEFT                 &kp DOWN                &kp UP_ARROW       &kp RIGHT        &trans      &to 0
-&mt LEFT_SHIFT LEFT_BRACKET  &trans        &trans        &trans        &kp LEFT_BRACKET      &kp RIGHT_BRACKET       &trans    &trans  &kp C_BRIGHTNESS_DEC     &kp C_BRIGHTNESS_INC    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_MUTE  &mt RSHIFT RIGHT_BRACKET
-                                                         &trans        &mt LALT DELETE       &mt LEFT_COMMAND SPACE  &trans    &trans  &mt LEFT_COMMAND RETURN  &mt LEFT_ALT BACKSPACE  &kp C_MUTE
+&kp CLCK                     &kp F1  &kp F2  &kp F3                 &kp F4                   &kp F5                       &kp F6       &kp F7             &kp F8                 &kp F9     &kp F10  &kp F11
+&trans                       &trans  &trans  &kp LEFT_PARENTHESIS   &kp LEFT_BRACKET         &trans                       &kp INT_YEN  &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &trans     &trans   &kp F12
+&mt LCTRL TAB                &trans  &trans  &trans                 &trans                   &trans                       &kp LEFT     &kp DOWN           &kp UP_ARROW           &kp RIGHT  &trans   &to 0
+&mt LEFT_SHIFT LEFT_BRACKET  &trans  &trans  &trans                 &trans                   &trans     &trans    &trans  &trans       &trans             &trans                 &trans     &trans   &mt RSHIFT RIGHT_BRACKET
+                                             &mt LEFT_ALT CAPSLOCK  &mt LEFT_COMMAND DELETE  &kp SPACE  &trans    &trans  &kp ENTER    &kp BACKSPACE      &kp RIGHT_ALT
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        Andrei3 {
+            // ------------------------------------------------------------------------------------------------------------
+            // | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
+            // |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
+            // |   `   |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   ~   |
+            // |       |     |     |      |      |      |        |  |       |      |  _    |  +    |  {   |   }   |  "|"  |
+            //                     |      |      |      |        |  |       |      |       |       |
+
+            bindings = <
+&kp CLCK                     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2           &bt BT_SEL 3             &bt BT_SEL 4                    &bt BT_CLR   &trans                &trans                &trans           &trans  &trans
+&kp ESCAPE                   &trans        &trans        &trans                 &trans                   &trans                          &kp INT_YEN  &trans                &trans                &trans           &trans  &trans
+&mt LCTRL TAB                &trans        &kp C_PREV    &kp C_PLAY_PAUSE       &kp C_NEXT               &trans                          &trans       &kp C_VOLUME_DOWN     &kp C_MUTE            &kp C_VOLUME_UP  &trans  &to 0
+&mt LEFT_SHIFT LEFT_BRACKET  &trans        &trans        &trans                 &trans                   &trans        &trans    &trans  &trans       &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans           &trans  &mt RSHIFT RIGHT_BRACKET
+                                                         &mt LEFT_ALT CAPSLOCK  &mt LEFT_COMMAND DELETE  &kp SPACE     &trans    &trans  &kp ENTER    &kp BACKSPACE         &kp RIGHT_ALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
