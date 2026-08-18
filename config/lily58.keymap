@@ -43,7 +43,7 @@
 &kp CLCK                     &kp F1  &kp F2  &kp F3                 &kp F4                   &kp F5                       &kp F6       &kp F7             &kp F8                 &kp F9     &kp F10  &kp F11
 &trans                       &trans  &trans  &kp LEFT_PARENTHESIS   &kp LEFT_BRACKET         &trans                       &kp INT_YEN  &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &trans     &trans   &kp F12
 &mt LCTRL TAB                &trans  &trans  &trans                 &trans                   &trans                       &kp LEFT     &kp DOWN           &kp UP_ARROW           &kp RIGHT  &trans   &to 0
-&mt LEFT_SHIFT LEFT_BRACKET  &trans  &trans  &trans                 &trans                   &trans     &trans    &trans  &trans       &trans             &trans                 &trans     &trans   &mt RSHIFT RIGHT_BRACKET
+&mt LEFT_SHIFT LEFT_BRACKET  &to 0   &to 1   &to 2                  &trans                   &trans     &trans    &trans  &trans       &kp PAGE_DOWN      &kp PAGE_UP            &trans     &trans   &mt RSHIFT RIGHT_BRACKET
                                              &mt LEFT_ALT CAPSLOCK  &mt LEFT_COMMAND DELETE  &kp SPACE  &trans    &trans  &kp ENTER    &kp BACKSPACE      &kp RIGHT_ALT
             >;
 
@@ -62,7 +62,7 @@
 &kp CLCK                     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2           &bt BT_SEL 3             &bt BT_SEL 4                    &bt BT_CLR   &trans                &trans                &trans           &trans  &trans
 &kp ESCAPE                   &trans        &trans        &trans                 &trans                   &trans                          &kp INT_YEN  &trans                &trans                &trans           &trans  &trans
 &mt LCTRL TAB                &trans        &kp C_PREV    &kp C_PLAY_PAUSE       &kp C_NEXT               &trans                          &trans       &kp C_VOLUME_DOWN     &kp C_MUTE            &kp C_VOLUME_UP  &trans  &to 0
-&mt LEFT_SHIFT LEFT_BRACKET  &trans        &trans        &trans                 &trans                   &trans        &trans    &trans  &trans       &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans           &trans  &mt RSHIFT RIGHT_BRACKET
+&mt LEFT_SHIFT LEFT_BRACKET  &to 0   &to 1   &to 2                 &trans                   &trans        &trans    &trans  &trans       &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans           &trans  &mt RSHIFT RIGHT_BRACKET
                                                          &mt LEFT_ALT CAPSLOCK  &mt LEFT_COMMAND DELETE  &kp SPACE     &trans    &trans  &kp ENTER    &kp BACKSPACE         &kp RIGHT_ALT
             >;
 
